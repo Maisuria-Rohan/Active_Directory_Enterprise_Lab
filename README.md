@@ -64,11 +64,8 @@ After logging into the server:
 
 Screenshots:
 <img width="1820" height="1138" alt="Screenshot 2026-02-19 at 7 04 19 PM" src="https://github.com/user-attachments/assets/b5b92da8-36b0-49f8-8c9e-e57d33e7b197" />
-<img width="1824" height="1140" alt="Screenshot 2026-02-19 at 7 05 51 PM" src="https://github.com/user-attachments/assets/8dc0b9e3-3fe1-4639-ae09-523894d539aa" />
 <img width="1696" height="944" alt="Screenshot 2026-02-19 at 7 08 57 PM" src="https://github.com/user-attachments/assets/5e6b9a3e-a506-4e13-b1d2-b075fd9caf35" />
 <img width="1712" height="1008" alt="Screenshot 2026-02-19 at 7 09 49 PM" src="https://github.com/user-attachments/assets/8694c4c4-2b68-49ed-a3eb-0de7679ac918" />
-
-
 
 ---
 
@@ -90,8 +87,9 @@ Inside the Employees OU, I created department OUs:
 
 This keeps everything organized by both role and department.
 
-Add Screenshot Here:
+Screenshots:
 
+<img width="1064" height="546" alt="Screenshot 2026-02-19 at 7 26 00 PM" src="https://github.com/user-attachments/assets/d8849f17-329e-4fa0-b887-393d3ad43478" />
 
 ---
 
@@ -101,11 +99,10 @@ Instead of creating users manually one by one, I used PowerShell.
 
 ### Employee Creation Script (23 Employees)
 
-Saved as: `powershell-user-creation.ps1`
-
 ```powershell
 Import-Module ActiveDirectory
 
+# Create employees accounts with temporary passwords
 for ($i = 1; $i -le 23; $i++) {
     $username = "emp$i"
     $password = ConvertTo-SecureString "Temp@1234!" -AsPlainText -Force
@@ -119,23 +116,20 @@ for ($i = 1; $i -le 23; $i++) {
         -ChangePasswordAtLogon $true `
         -Path "OU=Employees,DC=lab,DC=local"
 
-    Add-ADGroupMember -Identity "Employees-Group" -Members $username
 } 
 ```
 
 All employees were required to change their password at first login.
 
-Screenshot:  
 
 ---
 
 ## Manager Creation Script (5 Managers)
 
-Saved as: `powershell-user-creation.ps1`
-
 ```powershell
 Import-Module ActiveDirectory
 
+# Create manager accounts with temporary passwords
 for ($i = 1; $i -le 5; $i++) {
     $username = "manager$i"
     $password = ConvertTo-SecureString "Temp@1234!" -AsPlainText -Force
@@ -149,7 +143,6 @@ for ($i = 1; $i -le 5; $i++) {
         -ChangePasswordAtLogon $true `
         -Path "OU=Managers,DC=lab,DC=local"
 
-    Add-ADGroupMember -Identity "Managers-Group" -Members $username
 }
 ```
 
@@ -158,27 +151,30 @@ for ($i = 1; $i -le 5; $i++) {
 
 ## IT Admin Creation Script (2 IT Admins)
 
-Saved as: `powershell-user-creation.ps1`
-
 ```powershell
 Import-Module ActiveDirectory
 
-$admins = @("itadmin1", "itadmin2")
-$password = ConvertTo-SecureString "Temp@1234!" -AsPlainText -Force
+# Create IT Admin accounts with unique passwords
+$itAdmins = @(
+    @{ Name = "itadmin1"; Password = "RohanADMIN1Lab2026" },
+    @{ Name = "itadmin2"; Password = "RohanADMIN2Lab2026" }
+)
 
-foreach ($user in $admins) {
+foreach ($admin in $itAdmins) {
+
+    $securePassword = ConvertTo-SecureString $admin.Password -AsPlainText -Force
+
     New-ADUser `
-        -Name $user `
-        -SamAccountName $user `
-        -UserPrincipalName "$user@lab.local" `
-        -AccountPassword $password `
+        -Name $admin.Name `
+        -SamAccountName $admin.Name `
+        -UserPrincipalName "$($admin.Name)@lab.local" `
+        -AccountPassword $securePassword `
         -Enabled $true `
-        -ChangePasswordAtLogon $true `
         -Path "OU=IT-Admins,DC=lab,DC=local"
-}
-```
 
-IT Admins were added to the **IT-Admins-Group** with elevated permissions.
+}
+
+```
 
 ---
 
@@ -199,16 +195,29 @@ Users were added to:
 - Their role group  
 - Their department group  
 
-### Examples
+### Breakdown
 
-- emp1 → HR-Group  
-- emp6 → Finance-Group  
-- emp9 → Sales-Group  
+- emp1 - emp2 → HR-Group  
+- emp3 - emp6 → Finance-Group  
+- emp7 - emp23 → Sales-Group
+- emp1 - emp23 → Employees-Group
+- manager1 - manager5 → Manager-Group
+- itadmin1 - itadmin2 → IT-Admin_Group
+- IT-Admin_Group → Administrators
+
+--> IT Admins were added to IT-Admins-Group and IT-Admins-Group was added to built-in Administrators group.
+
 
 This follows **Role-Based Access Control (RBAC)**, where access is assigned based on role and department.
 
 Screenshot:
-_Add screenshot of Security Groups and user memberships here._
+<img width="774" height="522" alt="Screenshot 2026-02-19 at 7 26 17 PM" src="https://github.com/user-attachments/assets/3e3c7034-1e7a-46de-9ea3-40935541f521" />
+<img width="668" height="520" alt="Screenshot 2026-02-19 at 7 26 26 PM" src="https://github.com/user-attachments/assets/7d9dc164-18bb-4d97-9766-8435d4400c4a" />
+<img width="826" height="618" alt="Screenshot 2026-02-19 at 7 26 32 PM" src="https://github.com/user-attachments/assets/99e20639-7fd4-4555-ba89-4aaf7e40769c" />
+<img width="846" height="616" alt="Screenshot 2026-02-19 at 7 26 46 PM" src="https://github.com/user-attachments/assets/773d43d5-431a-4e32-983a-cba8c87c1e25" />
+<img width="714" height="532" alt="Screenshot 2026-02-19 at 7 26 39 PM" src="https://github.com/user-attachments/assets/4bceeff2-9bdd-476f-bf5a-fea40e4f3c85" />
+
+
 
 
 ---
