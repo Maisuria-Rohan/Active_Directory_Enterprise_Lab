@@ -62,9 +62,8 @@ After logging into the server:
 5. Rebooted and logged in as domain admin
 
 #### Screenshot:
-<img width="800" alt="Screenshot 2026-02-19 at 7 04 19 PM" src="https://github.com/user-attachments/assets/b5b92da8-36b0-49f8-8c9e-e57d33e7b197" />
 <p align="center">
-<img width="500" alt="Screenshot 2026-02-19 at 7 08 57 PM" src="https://github.com/user-attachments/assets/5e6b9a3e-a506-4e13-b1d2-b075fd9caf35" />
+<img width="500" alt="Screenshot 2026-02-19 at 7 04 19 PM" src="https://github.com/user-attachments/assets/b5b92da8-36b0-49f8-8c9e-e57d33e7b197" />
 <img width="500" alt="Screenshot 2026-02-19 at 7 09 49 PM" src="https://github.com/user-attachments/assets/8694c4c4-2b68-49ed-a3eb-0de7679ac918" />
 </p>
 ---
@@ -155,8 +154,8 @@ Import-Module ActiveDirectory
 
 # Create IT Admin accounts with unique passwords
 $itAdmins = @(
-    @{ Name = "itadmin1"; Password = "RohanADMIN1Lab2026" },
-    @{ Name = "itadmin2"; Password = "RohanADMIN2Lab2026" }
+    @{ Name = "itadmin1"; Password = "TempAdmin@123!" },
+    @{ Name = "itadmin2"; Password = "TempAdmin@123!" }
 )
 
 foreach ($admin in $itAdmins) {
@@ -264,13 +263,14 @@ Managers had fewer restrictions:
 
 ## 7. Account Lockout Policy
 
+Implemented account lockout policy to mitigate brute force login attempts and reduce risk of credential attacks.
+
 Configured domain policy to:
 
 - Lock account after 5 failed login attempts  
 - Set lockout duration to 15 min 
 - Reset counter after 15 min
 
-This simulates basic enterprise security controls.
 
 #### Screenshot:
 <p align="center">
@@ -299,7 +299,7 @@ Steps:
 <img width="500" alt="Screenshot 2026-02-19 at 4 00 48 PM" src="https://github.com/user-attachments/assets/dd8bab3e-4f7a-45cd-88b1-1032a69d3d72" />
 </p>
 
-<img width="500" alt="Screenshot 2026-02-19 at 4 01 24 PM" src="https://github.com/user-attachments/assets/99f5ecc9-311e-4520-af34-445b7addd54c" />
+
 
 
 ---
