@@ -45,9 +45,8 @@ This lab helped me understand how Active Directory works in a real company envir
 - Enabled RDP access (port 3389)
 - Connected using Microsoft Remote Desktop from my Mac
 
-Screenshot:
-
-<img width="2878" height="1340" alt="Screenshot 2026-02-19 at 6 55 03 PM" src="https://github.com/user-attachments/assets/e11e71c2-b568-4e49-8893-d7998ff7dd89" />
+#### Screenshot:
+<img src="https://github.com/user-attachments/assets/e11e71c2-b568-4e49-8893-d7998ff7dd89" width="600"/>
 
 
 ---
@@ -62,11 +61,12 @@ After logging into the server:
 4. DNS was configured automatically
 5. Rebooted and logged in as domain admin
 
-Screenshots:
-<img width="1820" height="1138" alt="Screenshot 2026-02-19 at 7 04 19 PM" src="https://github.com/user-attachments/assets/b5b92da8-36b0-49f8-8c9e-e57d33e7b197" />
-<img width="1696" height="944" alt="Screenshot 2026-02-19 at 7 08 57 PM" src="https://github.com/user-attachments/assets/5e6b9a3e-a506-4e13-b1d2-b075fd9caf35" />
-<img width="1712" height="1008" alt="Screenshot 2026-02-19 at 7 09 49 PM" src="https://github.com/user-attachments/assets/8694c4c4-2b68-49ed-a3eb-0de7679ac918" />
-
+#### Screenshot:
+<img width="800" alt="Screenshot 2026-02-19 at 7 04 19 PM" src="https://github.com/user-attachments/assets/b5b92da8-36b0-49f8-8c9e-e57d33e7b197" />
+<p align="center">
+<img width="500" alt="Screenshot 2026-02-19 at 7 08 57 PM" src="https://github.com/user-attachments/assets/5e6b9a3e-a506-4e13-b1d2-b075fd9caf35" />
+<img width="500" alt="Screenshot 2026-02-19 at 7 09 49 PM" src="https://github.com/user-attachments/assets/8694c4c4-2b68-49ed-a3eb-0de7679ac918" />
+</p>
 ---
 
 ## 3. Designing the Company Structure
@@ -87,9 +87,8 @@ Inside the Employees OU, I created department OUs:
 
 This keeps everything organized by both role and department.
 
-Screenshot:
-
-<img width="1064" height="546" alt="Screenshot 2026-02-19 at 7 26 00 PM" src="https://github.com/user-attachments/assets/d8849f17-329e-4fa0-b887-393d3ad43478" />
+#### Screenshot:
+<img width="600" alt="Screenshot 2026-02-19 at 7 26 00 PM" src="https://github.com/user-attachments/assets/d8849f17-329e-4fa0-b887-393d3ad43478" />
 
 ---
 
@@ -210,13 +209,18 @@ Users were added to:
 
 This follows **Role-Based Access Control (RBAC)**, where access is assigned based on role and department.
 
-Screenshots:
-<img width="774" height="522" alt="Screenshot 2026-02-19 at 7 26 17 PM" src="https://github.com/user-attachments/assets/3e3c7034-1e7a-46de-9ea3-40935541f521" />
-<img width="668" height="520" alt="Screenshot 2026-02-19 at 7 26 26 PM" src="https://github.com/user-attachments/assets/7d9dc164-18bb-4d97-9766-8435d4400c4a" />
-<img width="826" height="618" alt="Screenshot 2026-02-19 at 7 26 32 PM" src="https://github.com/user-attachments/assets/99e20639-7fd4-4555-ba89-4aaf7e40769c" />
-<img width="846" height="616" alt="Screenshot 2026-02-19 at 7 26 46 PM" src="https://github.com/user-attachments/assets/773d43d5-431a-4e32-983a-cba8c87c1e25" />
-<img width="714" height="532" alt="Screenshot 2026-02-19 at 7 26 39 PM" src="https://github.com/user-attachments/assets/4bceeff2-9bdd-476f-bf5a-fea40e4f3c85" />
+#### Screenshot:
+<p align="center">
+<img width="500" alt="Screenshot 2026-02-19 at 7 26 17 PM" src="https://github.com/user-attachments/assets/3e3c7034-1e7a-46de-9ea3-40935541f521" />
+<img width="500" alt="Screenshot 2026-02-19 at 7 26 26 PM" src="https://github.com/user-attachments/assets/7d9dc164-18bb-4d97-9766-8435d4400c4a" />
+</p>
 
+<p align="center">
+<img width="500" alt="Screenshot 2026-02-19 at 7 26 32 PM" src="https://github.com/user-attachments/assets/99e20639-7fd4-4555-ba89-4aaf7e40769c" />
+<img width="500" alt="Screenshot 2026-02-19 at 7 26 46 PM" src="https://github.com/user-attachments/assets/773d43d5-431a-4e32-983a-cba8c87c1e25" />
+</p>
+
+<img width="500" alt="Screenshot 2026-02-19 at 7 26 39 PM" src="https://github.com/user-attachments/assets/4bceeff2-9bdd-476f-bf5a-fea40e4f3c85" />
 
 
 
@@ -236,10 +240,11 @@ Employees were restricted from:
 - Opening Task Manager  
 - Installing software from removable media  
 
-Screenshot:
-<img width="2168" height="1332" alt="Screenshot 2026-02-19 at 3 43 19 PM" src="https://github.com/user-attachments/assets/cf80f42d-f786-4a16-ad75-3a7530082710" />
-<img width="2262" height="1352" alt="Screenshot 2026-02-19 at 3 43 10 PM" src="https://github.com/user-attachments/assets/a1fdbe9b-10fb-467e-9b03-e763c20662f7" />
-
+#### Screenshot:
+<p align="center">
+<img width="500" alt="Screenshot 2026-02-19 at 3 43 10 PM" src="https://github.com/user-attachments/assets/a1fdbe9b-10fb-467e-9b03-e763c20662f7" />
+<img width="500" alt="Screenshot 2026-02-19 at 3 43 19 PM" src="https://github.com/user-attachments/assets/cf80f42d-f786-4a16-ad75-3a7530082710" />
+</p>
 
 ---
 
@@ -252,9 +257,8 @@ Managers had fewer restrictions:
 - Limited Control Panel access  
 - Still blocked from Registry Editor  
 
-Screenshot:
-_Add screenshot of Managers GPO settings here._
-<img width="2244" height="1332" alt="Screenshot 2026-02-19 at 3 43 37 PM" src="https://github.com/user-attachments/assets/6e5f781e-e574-4f01-87d6-9b39df7a91e8" />
+#### Screenshot:
+<img width="600" alt="Screenshot 2026-02-19 at 3 43 37 PM" src="https://github.com/user-attachments/assets/6e5f781e-e574-4f01-87d6-9b39df7a91e8" />
 
 ---
 
@@ -268,9 +272,10 @@ Configured domain policy to:
 
 This simulates basic enterprise security controls.
 
-Screenshot:
-<img width="1800" height="940" alt="Screenshot 2026-02-19 at 4 51 48 PM" src="https://github.com/user-attachments/assets/c3c5c738-65c6-4f21-9488-05466be819a0" />
-<img width="1792" height="960" alt="Screenshot 2026-02-19 at 4 52 05 PM" src="https://github.com/user-attachments/assets/c5c401e5-6a76-439c-805f-d909949f77ff" />
+#### Screenshot:
+<p align="center">
+<img width="500" alt="Screenshot 2026-02-19 at 4 51 48 PM" src="https://github.com/user-attachments/assets/c3c5c738-65c6-4f21-9488-05466be819a0" />
+<img width="500" alt="Screenshot 2026-02-19 at 4 52 05 PM" src="https://github.com/user-attachments/assets/c5c401e5-6a76-439c-805f-d909949f77ff" />
 
 
 ---
@@ -288,10 +293,13 @@ Steps:
 3. Select **Reset Password**  
 4. Force password change at next logon  
 
-Screenshot
-<img width="918" height="792" alt="Screenshot 2026-02-19 at 4 00 13 PM" src="https://github.com/user-attachments/assets/eb27eb57-c82d-4029-a32e-b3e31227e8ae" />
-<img width="846" height="588" alt="Screenshot 2026-02-19 at 4 00 48 PM" src="https://github.com/user-attachments/assets/dd8bab3e-4f7a-45cd-88b1-1032a69d3d72" />
-<img width="758" height="386" alt="Screenshot 2026-02-19 at 4 01 24 PM" src="https://github.com/user-attachments/assets/99f5ecc9-311e-4520-af34-445b7addd54c" />
+#### Screenshot:
+<p align="center">
+<img width="500" alt="Screenshot 2026-02-19 at 4 00 13 PM" src="https://github.com/user-attachments/assets/eb27eb57-c82d-4029-a32e-b3e31227e8ae" />
+<img width="500" alt="Screenshot 2026-02-19 at 4 00 48 PM" src="https://github.com/user-attachments/assets/dd8bab3e-4f7a-45cd-88b1-1032a69d3d72" />
+</p>
+
+<img width="500" alt="Screenshot 2026-02-19 at 4 01 24 PM" src="https://github.com/user-attachments/assets/99f5ecc9-311e-4520-af34-445b7addd54c" />
 
 
 ---
@@ -302,10 +310,12 @@ Screenshot
 - Right-click user → Disable Account  
 - User can no longer log in  
 
-Screenshot:
-<img width="1444" height="944" alt="Screenshot 2026-02-19 at 4 43 32 PM" src="https://github.com/user-attachments/assets/ce211c98-1786-4fac-9201-14e606428313" />
-<img width="906" height="500" alt="Screenshot 2026-02-19 at 4 43 54 PM" src="https://github.com/user-attachments/assets/3b4b9552-598c-4462-8de9-3bf82eed97bf" />
 
+#### Screenshot:
+<p align="center">
+<img width="500" alt="Screenshot 2026-02-19 at 4 43 32 PM" src="https://github.com/user-attachments/assets/ce211c98-1786-4fac-9201-14e606428313" />
+<img width="500" alt="Screenshot 2026-02-19 at 4 43 54 PM" src="https://github.com/user-attachments/assets/3b4b9552-598c-4462-8de9-3bf82eed97bf" />
+</p>
 
 ---
 
@@ -314,11 +324,11 @@ Screenshot:
 - Right-click user → Delete  
 - Account permanently removed from the domain  
 
-Screenshot:
-<img width="1688" height="1048" alt="Screenshot 2026-02-19 at 4 56 22 PM" src="https://github.com/user-attachments/assets/0a1333ea-1863-4281-ab37-80ebdc344d74" />
-
-<img width="1458" height="912" alt="Screenshot 2026-02-19 at 4 56 33 PM" src="https://github.com/user-attachments/assets/243ab6a8-9247-4764-93e3-ecf8e27cf69f" />
-
+#### Screenshot:
+<p align="center">
+<img width="500" alt="Screenshot 2026-02-19 at 4 56 22 PM" src="https://github.com/user-attachments/assets/0a1333ea-1863-4281-ab37-80ebdc344d74" />
+<img width="500" alt="Screenshot 2026-02-19 at 4 56 33 PM" src="https://github.com/user-attachments/assets/243ab6a8-9247-4764-93e3-ecf8e27cf69f" />
+</p>
 
 ---
 
@@ -338,8 +348,8 @@ Tested logins using:
 
 Each role had different restrictions based on applied Group Policies.
 
-Screenshot:
-<img width="2314" height="858" alt="Screenshot 2026-02-19 at 7 00 58 PM" src="https://github.com/user-attachments/assets/28910bf3-28a0-4450-903f-647ba906491b" />
+#### Screenshot:
+<img width="600" alt="Screenshot 2026-02-19 at 7 00 58 PM" src="https://github.com/user-attachments/assets/28910bf3-28a0-4450-903f-647ba906491b" />
 
 
 ---
